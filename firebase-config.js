@@ -1,10 +1,19 @@
-// Configuração do projeto Firebase do Controle de Frota.
-window.firebaseConfig = {
-  apiKey: "AIzaSyBopzOAkR82_CfiPH9DCeuZwZu84LvxJS0",
-  authDomain: "sistema-manutencao-frota.firebaseapp.com",
-  databaseURL: "https://sistema-manutencao-frota-default-rtdb.firebaseio.com",
-  projectId: "sistema-manutencao-frota",
-  storageBucket: "sistema-manutencao-frota.firebasestorage.app",
-  messagingSenderId: "11156938031",
-  appId: "1:11156938031:web:480be9c07941bc2375d5da"
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAWZbFnlpeSfu2pKur8Y_1m9pHx-ecsGGM",
+  authDomain: "controledegastos-1020.firebaseapp.com",
+  projectId: "controledegastos-1020",
+  storageBucket: "controledegastos-1020.firebasestorage.app",
+  messagingSenderId: "1044434117100",
+  appId: "1:1044434117100:web:fc932c88938db0b63120c9"
 };
+
+const firebaseApp = initializeApp(firebaseConfig);
+
+export const auth = getAuth(firebaseApp);
+export const db = getFirestore(firebaseApp);
+export { firebaseConfig };
